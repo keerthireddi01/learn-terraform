@@ -13,3 +13,15 @@ output "price" {
     value = data.aws_ec2_spot_price.example.spot_price
 }   
 }
+
+
+#sg-0dadecd3d04c960d9
+
+data "aws_security_group" "selected" {
+    name = "allow-all"
+}
+output "sgid" {
+  value = data.aws_security_group.selected.id
+}    
+  
+
