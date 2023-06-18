@@ -26,12 +26,16 @@ output "sgid" {
 
 #amiid 
 data "aws_ami" "example" {
-  owners = ["amazon"]
+  owners = ["017192293641"]
   most_recent = true
   name_regex = "Centos=8-DevOps-Practice"
  }  
 
  output "ami" {
     value = data.aws_ami.example.id
+ }
+
+ provider "aws" {
+    region = "us-east-1"
  }
 
