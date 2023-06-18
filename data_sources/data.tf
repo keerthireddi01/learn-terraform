@@ -24,7 +24,7 @@ output "sgid" {
   value = data.aws_security_group.selected.id
 }    
 
-
+#amiid 
 data "aws_ami" "example" {
   owners = ["amazon"]
   most_recent = true
